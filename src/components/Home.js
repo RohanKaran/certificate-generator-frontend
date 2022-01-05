@@ -71,8 +71,11 @@ function Home(){
                 <Form onSubmit={handleSubmit}>
                   <Form.Group className="mb-3" >
                     <Form.Label>Organization name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter organization name"
-                                  onChange={event => setOrg(event.target.value)}/>
+                    <Form.Control type="text"
+                                  placeholder="Enter organization name"
+                                  onChange={event => setOrg(event.target.value)}
+                                  required
+                    />
                   </Form.Group>
 
                   <Form.Group className="mb-3" controlId="formBasicPassword"
@@ -126,7 +129,7 @@ function Home(){
                 onClick={() => downPdf()}
                 >
                     <FaDownload className={"mb-1"}/> DOWNLOAD ALL
-                </Button>{' '}
+                </Button>
             </Container>
         </>
     );

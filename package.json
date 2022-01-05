@@ -1,14 +1,23 @@
 {
   "name": "frontend",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.24.0",
+    "convertapi": "^1.11.1",
+    "core.js": "^0.4.2",
+    "file-saver": "^2.0.5",
+    "jspdf": "^2.5.0",
+    "jszip": "^3.7.1",
     "react": "^17.0.2",
+    "react-bootstrap": "^2.1.0",
     "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "^5.0.0",
     "web-vitals": "^2.1.2"
   },
   "scripts": {
@@ -34,5 +43,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "browser": {
+  "fs": false,
+  "path": false,
+  "os": false
+  },
+  "proxy": "https://cgen-backend.herokuapp.com"
+
 }

@@ -13,32 +13,31 @@ function App() {
 
   return (
       <>
-     <Navbar bg="primary" expand="lg" className={"text-uppercase navbar-expand-lg navbar-light fixed-top"} id={"mainNav"} variant={"dark"}>
-  <Container>
-    <Navbar.Brand href="#home">Certificate Generator</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="ms-auto">
-        <Nav.Link href="#home" className={"navItem mx-0 mx-lg-1"}>Home</Nav.Link>
-        <Nav.Link href="#link" className={"navItem mx-0 mx-lg-1"} onClick={handleShow}>Link</Nav.Link>
-         <Nav.Link href="#about" className={"navItem mx-0 mx-lg-1"}>About</Nav.Link>
-      </Nav>
-    </Navbar.Collapse>
-  </Container>
-</Navbar>
+     <Navbar bg="primary" expand="lg" className={"text-uppercase navbar-expand-lg navbar-light fixed-top"}
+             id={"mainNav"} variant={"dark"}>
+        <Container>
+          <Navbar.Brand href="#mainNav">Certificate Generator</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+
+              <Nav.Link href="#link" className={"navItem mx-0 mx-lg-1"} onClick={handleShow}>Login</Nav.Link>
+              <Nav.Link href="#about" className={"navItem mx-0 mx-lg-1"}>About</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 
 
-      <Modal show={show} onHide={handleClose} align={"center"} centered size="lg" style={{"font-family": "Montserrat"}}>
+      <Modal id={"modal"} show={show} onHide={handleClose} align={"center"} centered size="lg"
+             style={{"font-family": "Montserrat"}}>
         <Modal.Header closeButton>
           <Modal.Title>Club login</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body><div className={"text-danger card-text"}> Under Development!</div> </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
           <Button variant="success" onClick={handleClose}>
-            Login
+            LOGIN
           </Button>
         </Modal.Footer>
       </Modal>

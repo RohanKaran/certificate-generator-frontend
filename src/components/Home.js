@@ -18,7 +18,7 @@ function Home(){
     // const [img, setImage] = useState(null)
     const [bool, setBool] = useState(true)
     const [loading, setLoading] = useState(true)
-    const backend_url = process.env.backend_url
+    const backend_url = process.env.REACT_APP_BACKEND_URL
 
 
 
@@ -47,7 +47,7 @@ function Home(){
 
 
     const addImageHandler = async () => {
-        await axios.post(backend_url.toString(),
+        await axios.post(backend_url+`/add/`,
             {'name':name , 'org': org})
             .then(res => {
                 setBool(true);

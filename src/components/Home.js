@@ -36,10 +36,6 @@ function Home(){
           .then(function (content) {
             saveAs(content, "Certificates.zip");
           });
-
-        // const pdfURL = doc.output("bloburl");
-        // window.open(pdfURL, "_blank")
-        console.log("reached")
     };
 
 
@@ -52,7 +48,6 @@ function Home(){
                 setBool(true);
                 setLoading(false);
                 imgs.push(res.data)
-                console.log(res)
                 setLoading(true)
                 setBool(false)
 

@@ -24,13 +24,13 @@ function Home(){
     const downPdf = async () => {
         const zip = new JSZip();
         for (let file = 0; file < imgs.length; file++){
-            const img = 'data:image/png;base64,' + imgs[file]
+            const img = 'data:image/png;base64,' + imgs[file].file
             const response = await fetch(img);
             // here image is url/location of image
             const blob = await response.blob();
 
             const image = new File([blob], 'image.png', {type: 'images/png'});
-            zip.file(`cert`+ file.toString() + `.png`, image);
+            zip.file(imgs[file].filename, image);
         }
         zip.generateAsync({ type: "blob" })
           .then(function (content) {

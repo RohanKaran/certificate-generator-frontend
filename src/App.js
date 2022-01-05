@@ -56,12 +56,12 @@ function App() {
               <Col className="col-md-4 mb-5 mb-lg-0">
                 <h4 className="text-uppercase mb-4">MORE</h4>
 
-                  <a href={"https://github.com/RohanKaran/certificate-generator/issues/new/choose"}
+                  <a href={"https://github.com/rohankaran/certificate-generator/issues/new/choose"}
                      className={"text-white text-decoration-none"}>
                     <p>Report a bug</p>
                   </a>
 
-                  <a href={"https://github.com/RohanKaran/certificate-generator"}
+                  <a href={"https://github.com/rohankaran/certificate-generator"}
                         className={"text-white text-decoration-none"}>
                     <p>
                       View app source

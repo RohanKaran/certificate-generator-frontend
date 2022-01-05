@@ -15,7 +15,6 @@ function Home(){
     const [org, setOrg ] = useState("");
     const [name, setName ] = useState("");
     const [imgs, setImgs] = useState([])
-    // const [img, setImage] = useState(null)
     const [bool, setBool] = useState(true)
     const [loading, setLoading] = useState(true)
     const backend_url = process.env.REACT_APP_BACKEND_URL
@@ -66,16 +65,6 @@ function Home(){
         ;
     };
 
-    // useEffect(() => {
-    //     axios.get(`http://127.0.0.1:8000/cat`)
-    //         .then(res => {
-    //             setImage(res.data.file)
-    //             imgs.push(res.data)
-    //             setBool(false)
-    //             console.log("success")
-    //         })
-    //
-    // }, []);
 
 
 
@@ -83,16 +72,12 @@ function Home(){
         <>
             <header className={"text-left text-white bg-primary masthead"}>
             <Container>
-                {/*<img className="img-fluid d-block mx-auto mb-5" src="profile.png"/>*/}
                 <h1 className={"text-center mb-4"}>{org}</h1>
                 <Form onSubmit={handleSubmit}>
                   <Form.Group className="mb-3" >
                     <Form.Label>Organization name</Form.Label>
                     <Form.Control type="text" placeholder="Enter organization name"
                                   onChange={event => setOrg(event.target.value)}/>
-                    {/*<Form.Text className="text-muted">*/}
-                    {/*  We'll never share your email with anyone else.*/}
-                    {/*</Form.Text>*/}
                   </Form.Group>
 
                   <Form.Group className="mb-3" controlId="formBasicPassword"
@@ -112,9 +97,6 @@ function Home(){
             </Container>
                 </header>
             <br/>
-            {/*<Container>*/}
-            {/*    <img src={`data:image/png;charset=utf-8;base64,${img}`} width={"100%"} alt={"certificate"}/>*/}
-            {/*</Container>*/}
 
             <Container align={"center"} hidden={bool} className={"mb-5 carousel"}>
 
@@ -131,7 +113,7 @@ function Home(){
                             style={{
                                 "background-color": "red",
                                 color:"white",
-                                "font-size":"1rem",
+                                "font-size":"0.8rem",
                                 "border-radius": "0rem"}}
                             onClick={() => {
                                 setImgs([])

@@ -25,3 +25,5 @@ yarn-error.log*
 src/reportWebVitals.js
 src/setupTests.js
 src/App.test.js
+
+.env

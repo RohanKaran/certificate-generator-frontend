@@ -54,35 +54,35 @@ function App() {
           <Container>
             <Row>
               <Col className="col-md-4 mb-5 mb-lg-0">
-                <h4 className="text-uppercase mb-4">Location</h4>
-                <p>2215 John Daniel Drive<br/>Clark, MO 65243</p>
+                <h4 className="text-uppercase mb-4">MORE</h4>
+
+                  <a href={""} className={"text-white text-decoration-none"}><p>Report a bug</p></a>
+
+                  <p><a href={""} className={"text-white text-decoration-none"}>View app source</a>
+                  </p>
               </Col>
               <Col className="col-md-4 mb-5 mb-lg-0">
-                <h4 className="text-uppercase">Connect with me</h4>
+                <h4 className="text-uppercase mb-4">CONTACT</h4>
                 <ul className="list-inline">
                   <li className="list-inline-item"><Button
-                      variant="outline-light rounded-circle" role="button" href="#">
-                    <FaLinkedinIn/>
+                      variant="outline-light rounded-circle" role="button" href="https://linkedin.com/in/rohankaran001">
+                    <FaLinkedinIn className={"mb-1"}/>
                   </Button></li>
                   <li className="list-inline-item"><Button
                       variant="outline-light rounded-circle" role="button"
                       href="https://github.com/rohankaran">
-                    <FaGithub/>
+                    <FaGithub className={"mb-1"}/>
                   </Button></li>
                   <li className="list-inline-item"><Button
                       variant="outline-light rounded-circle" role="button"
                       href="mailto:rohankaran001@gmail.com">
-                    <FaEnvelope/>
+                    <FaEnvelope className={"mb-1"}/>
                   </Button></li>
-                  {/*<li className="list-inline-item"><Button*/}
-                  {/*    variant="outline-light rounded-circle" role="button" href="#">*/}
-                  {/*  <FaDribbble/>*/}
-                  {/*</Button></li>*/}
                 </ul>
               </Col>
-              <Col className="col-md-4">
-                <h4 className="text-uppercase mb-4">About Freelancer</h4>
-                <p className="lead mb-0"><span>Freelance is a free to use, open source Bootstrap theme. </span></p>
+              <Col className="col-md-4 mb-5 mb-lg-0">
+                <h4 className="text-uppercase mb-4">About</h4>
+                <p>Certificate Generator web site created using FastAPI and React</p>
               </Col>
             </Row>
           </Container>

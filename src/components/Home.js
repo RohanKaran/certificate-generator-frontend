@@ -122,6 +122,7 @@ function Home(){
                 <Slideshow images={imgs}/>
 
                 <Button variant={"outline-dark"} size={"lg"}
+                        className={"my-5"}
                 onClick={() => downPdf()}
                 >
                     <FaDownload className={"mb-1"}/> DOWNLOAD ALL

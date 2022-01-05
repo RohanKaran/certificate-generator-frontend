@@ -3,8 +3,8 @@
   "version": "0.3.0",
   "private": true,
   "engines": {
-    "npm": "8.3.0",
-    "node": "16.13.1"
+    "npm": "^8.3.0",
+    "node": "^16.13.1"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
@@ -53,6 +53,5 @@
     "fs": false,
     "path": false,
     "os": false
-  },
-  "proxy": "https://cgen-backend.herokuapp.com"
+  }
 }

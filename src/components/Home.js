@@ -47,7 +47,7 @@ function Home(){
 
 
     const addImageHandler = async () => {
-        await axios.post(backend_url+`/add/`,
+        await axios.post(backend_url.toString(),
             {'name':name , 'org': org})
             .then(res => {
                 setBool(true);

@@ -134,6 +134,11 @@ Button.btn-xl {
   color: #ffffff;
 }
 
+  #mainNav .navbar-brand {
+    font-size: 1rem;
+    transition: font-size .3s;
+}
+
 .container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
   width: 100%;
   padding-right: 0.75rem;

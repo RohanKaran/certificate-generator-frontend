@@ -93,7 +93,13 @@ function App() {
               </Col>
             </Row>
           </Container>
+
         </footer>
+        <div className="text-center text-white copyright card-text py-4" style={{background:"#283848"}}>
+          <Container>
+            <small>© 1.0.0</small>
+          </Container>
+        </div>
         </>
   );
 }

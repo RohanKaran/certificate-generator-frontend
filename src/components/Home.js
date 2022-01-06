@@ -109,7 +109,7 @@ function Home(){
                 <div align={"right"}>
                     <Button variant={"danger"}
                             style={{
-                                "background-color": "red",
+                                background: "red",
                                 color:"white",
                                 "font-size":"0.8rem",
                                 "border-radius": "0rem"}}

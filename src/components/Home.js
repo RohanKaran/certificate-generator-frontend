@@ -28,7 +28,7 @@ function Home(){
             const blob = await response.blob();
 
             const image = new File([blob], 'image.png', {type: 'images/png'});
-            zip.file(imgs[file].filename + "_" + file + 1 + ".png", image);
+            zip.file(imgs[file].filename + "_" + (file + 1) + ".png", image);
         }
         zip.generateAsync({ type: "blob" })
           .then(function (content) {

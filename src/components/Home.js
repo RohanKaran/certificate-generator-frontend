@@ -46,18 +46,18 @@ function Home(){
             {'name':name , 'org': org})
             .then(res => {
                 setBool(true);
-                setLoading(false);
+
                 imgs.push(res.data)
-                setLoading(true)
+
                 setBool(false)
 
             })
     };
     const handleSubmit = (e) => {
+        setLoading(false);
         e.preventDefault();
         e.stopPropagation();
-        addImageHandler()
-        ;
+        addImageHandler().then(() => setLoading(true));
     };
 
 
@@ -96,11 +96,17 @@ function Home(){
                 </header>
             <br/>
 
+            <div align={"center"}  hidden={loading} className={"mb-4"}>
+            <Image src={"https://www.dropbox.com/s/aejzhvqvtegnp02/Spinner-1s-800px.svg?raw=1"}
+                   fluid={true}
+                   className={"float-none"}
+                   style={{width: "5rem", maxWidth: '15%'}}/>
+                <span>Adding...</span>
+                </div>
+
             <Container align={"center"} hidden={bool} className={"mb-5 carousel"}>
 
-                <Image src={"https://www.dropbox.com/s/aejzhvqvtegnp02/Spinner-1s-800px.svg?raw=1"}
-                   fluid={true}
-                   hidden={loading}/>
+
 
                 <h3><b style={{"color":"#2C3E50"}}>PREVIEW</b></h3>
 

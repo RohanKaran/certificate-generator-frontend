@@ -154,8 +154,30 @@ function Home(){
 
 
             {/*Preview*/}
-            <Container align={"center"} className={"mb-5 carousel"} hidden={!bool}>
-            <Carousel>
+
+
+
+            <h3><b style={{"color":"#2C3E50"}}>PREVIEW</b></h3>
+            <div className="border-top border-5 border-dark hr align-items-center mt-4 mb-2"/>
+
+
+            <Container align={"center"} className={"mb-5 carousel"}
+                            hidden={!bool} >
+
+                <div align={"right"}>
+                    <Button variant={"outline-danger"} id={"clear"}
+                            onClick={() => {
+                                setImgs([])
+                                setBool(true)
+                            }}
+                    >
+                    <FaTrash className={"mb-1"}/> CLEAR
+                    </Button>
+                </div>
+
+            <Carousel
+                className={"carousel border border-2 border-dark"}
+                hidden={!bool}>
                 <Carousel.Item >
                     <Image
                       src={`/base_text.png`}
@@ -168,17 +190,10 @@ function Home(){
 
 
 
-
             <Container align={"center"} className={"mb-5 carousel"} hidden={bool}>
-
-
-
-                <h3><b style={{"color":"#2C3E50"}}>PREVIEW</b></h3>
-
-                <div className="border-top border-5 border-dark hr align-items-center mt-4 mb-2"/>
-
                 <div align={"right"}>
                     <Button variant={"outline-danger"} id={"clear"}
+                            hidden={bool}
                             onClick={() => {
                                 setImgs([])
                                 setBool(true)

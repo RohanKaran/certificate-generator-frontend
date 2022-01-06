@@ -133,12 +133,13 @@ function Home(){
                                   required
                         />
                   </Form.Group>
-
-                    <Button type="submit" variant={"light"}
-                          className={"btn btn-outline-light btn-xl mb-1 my-2"}
-                  >
-                    <FaPlus className={"mb-1"}/> ADD
-                  </Button>
+                    <div align={"center"} className={"mt-4"}>
+                        <Button type="submit" variant={"light"}
+                              className={"btn btn-outline-light btn-xl"}
+                      >
+                        <FaPlus className={"mb-1"}/> ADD
+                      </Button>
+                        </div>
                 </Form>
 
             </Container>

@@ -1,14 +1,13 @@
 import '../App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState} from "react";
-import {Button, Container, Form, Image} from "react-bootstrap";
+import {Button, Container, Figure, Form} from "react-bootstrap";
 import axios from "axios";
 import Slideshow from "./ImageList";
 import {FaDownload, FaTrash} from "react-icons/fa";
 // import {jsPDF} from "jspdf";
 import JSZip from "jszip";
-import { saveAs } from 'file-saver';
-
+import {saveAs} from 'file-saver';
 
 
 function Home(){
@@ -17,7 +16,6 @@ function Home(){
     const [imgs, setImgs] = useState([])
     const [bool, setBool] = useState(true)
     const [loading, setLoading] = useState(true)
-    let logo;
     const backend_url = process.env.REACT_APP_BACKEND_URL
 
 
@@ -62,15 +60,28 @@ function Home(){
     };
 
 
-    let base64data = "";
-    const handleChange = (event) => {
+    const [baseImage, setBaseImage] = useState("");
 
-        logo = event.target.file
-        const reader = new FileReader();
-        reader.readAsDataURL(logo);
-        base64data = reader.result;
-        console.log(base64data.substr(base64data.indexOf(',')+1) )
-    }
+      const uploadImage = async (e) => {
+        const file = e.target.files[0];
+        const base64 = await convertBase64(file);
+        setBaseImage(base64);
+      };
+
+      const convertBase64 = (file) => {
+        return new Promise((resolve, reject) => {
+          const fileReader = new FileReader();
+          fileReader.readAsDataURL(file);
+
+          fileReader.onload = () => {
+            resolve(fileReader.result);
+          };
+
+          fileReader.onerror = (error) => {
+            reject(error);
+          };
+        });
+      };
 
 
 
@@ -79,8 +90,8 @@ function Home(){
         <>
             <header className={"text-left text-white bg-primary masthead"}>
             <Container>
-                <div align={"center"}  hidden={logo===""} className={"mb-4"}>
-                <Image src={`data:image/png;charset=utf-8;base64,${base64data.substr(base64data.indexOf(',')+1)}`}
+                <div align={"center"}  hidden={baseImage===""} className={"mb-4"}>
+                <Figure.Image src={baseImage}
                    fluid={true}
                    style={{width: "5rem", maxWidth: '15%'}}
                 />
@@ -101,7 +112,9 @@ function Home(){
                     <Form.Label>Organization logo</Form.Label>
                     <Form.Control type="file"
                                   placeholder="Upload organization logo"
-                                  onChange={handleChange}
+                                  onChange={(e) => {
+                                    uploadImage(e);
+                                        }}
                                   accept={"image/png, image/jpeg"}
 
                     />
@@ -126,9 +139,8 @@ function Home(){
             <br/>
 
             <div align={"center"}  hidden={loading} className={"mb-4"}>
-            <Image src={"https://www.dropbox.com/s/aejzhvqvtegnp02/Spinner-1s-800px.svg?raw=1"}
+            <Figure.Image src={"https://www.dropbox.com/s/aejzhvqvtegnp02/Spinner-1s-800px.svg?raw=1"}
                    fluid={true}
-                   className={"float-none"}
                    style={{width: "5rem", maxWidth: '15%'}}/>
                 <span>Adding...</span>
                 </div>

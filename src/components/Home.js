@@ -42,7 +42,7 @@ function Home(){
 
     const addImageHandler = async () => {
         await axios.post(backend_url+`/add/`,
-            {'name':name , 'org': org})
+            {'name':name , 'org': org , 'logo': baseImage.substr(22)})
             .then(res => {
                 setBool(true);
 
@@ -64,6 +64,7 @@ function Home(){
 
       const uploadImage = async (e) => {
         const file = e.target.files[0];
+        console.log(e.target)
         const base64 = await convertBase64(file);
         setBaseImage(base64);
       };
@@ -71,7 +72,12 @@ function Home(){
       const convertBase64 = (file) => {
         return new Promise((resolve, reject) => {
           const fileReader = new FileReader();
-          fileReader.readAsDataURL(file);
+          try {
+              fileReader.readAsDataURL(file);
+          }
+          catch {
+              setBaseImage("")
+          }
 
           fileReader.onload = () => {
             resolve(fileReader.result);

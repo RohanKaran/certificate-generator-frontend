@@ -125,8 +125,7 @@ function Home(){
                     />
                   </Form.Group>
 
-                  <Form.Group className="mb-3" controlId="formBasicPassword"
-                  >
+                  <Form.Group className="mb-3">
                     <Form.Label>Add Name</Form.Label>
                     <Form.Control type="text" placeholder="Enter name"
                                   onChange={event => setName(event.target.value)}

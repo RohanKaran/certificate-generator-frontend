@@ -4,7 +4,7 @@ import {useState} from "react";
 import {Button, Carousel, Container, Figure, Form, Image} from "react-bootstrap";
 import axios from "axios";
 import Slideshow from "./ImageList";
-import {FaDownload, FaTrash} from "react-icons/fa";
+import {FaDownload, FaPlus, FaTrash} from "react-icons/fa";
 import JSZip from "jszip";
 import {saveAs} from 'file-saver';
 
@@ -28,7 +28,7 @@ function Home(){
             const blob = await response.blob();
 
             const image = new File([blob], 'image.png', {type: 'images/png'});
-            zip.file(imgs[file].filename + "_" + file +1 , image);
+            zip.file(imgs[file].filename + "_" + file + 1 + ".png", image);
         }
         zip.generateAsync({ type: "blob" })
           .then(function (content) {
@@ -137,7 +137,7 @@ function Home(){
                     <Button type="submit" variant={"light"}
                           className={"btn btn-outline-light btn-xl mb-1 my-2"}
                   >
-                    Add +
+                    Add <FaPlus className={"md-1"}/>
                   </Button>
                 </Form>
 

@@ -3,6 +3,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   font-weight: 700;
+  word-wrap: break-word;
 
 }
 
@@ -24,12 +25,14 @@ header.masthead {
   padding-top: calc(3rem + 72px);
   padding-bottom: 2rem;
 
+
 }
 
 header.masthead h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 3rem;
   font-weight: 700;
+
 }
 
 Button.btn {
@@ -50,13 +53,26 @@ Button.btn {
   padding: .375rem .75rem;
   font-size: 1.5rem;
   border-radius: .25rem;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,black .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 #modal Button{
   font-size:1.2rem;
   font-weight: 100;
 
+}
+
+#clear {
+  border-color: red;
+  color:red;
+  font-size:0.8rem;
+  border-radius: 0;
+  background-color: transparent;
+  /*-webkit-user-select: none;*/
+  /*-moz-user-select: none;*/
+  /*-ms-user-select: none;*/
+  /*user-select: none;*/
+  /*transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;*/
 }
 
 Button.btn-outline-light {

@@ -107,12 +107,7 @@ function Home(){
                 <div className="border-top border-5 border-dark hr align-items-center mt-4 mb-2"/>
 
                 <div align={"right"}>
-                    <Button variant={"danger"}
-                            style={{
-                                background: "red",
-                                color:"white",
-                                "font-size":"0.8rem",
-                                "border-radius": "0rem"}}
+                    <Button variant={"outline-danger"} id={"clear"}
                             onClick={() => {
                                 setImgs([])
                                 setBool(true)

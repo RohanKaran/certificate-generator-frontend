@@ -56,11 +56,13 @@ function App() {
                 <h4 className="text-uppercase mb-4">MORE</h4>
 
                   <a href={"https://github.com/rohankaran/certificate-generator/issues/new/choose"}
+                     target={"_blank"}
                      className={"text-white text-decoration-none"}>
                     <p>Report a bug</p>
                   </a>
 
                   <a href={"https://github.com/rohankaran/certificate-generator"}
+                     target={"_blank"}
                         className={"text-white text-decoration-none"}>
                     <p>
                       View app source
@@ -72,17 +74,23 @@ function App() {
                 <h4 className="text-uppercase mb-4">CONTACT</h4>
                 <ul className="list-inline">
                   <li className="list-inline-item"><Button
-                      variant="outline-light rounded-circle" role="button" href="https://linkedin.com/in/rohankaran001">
+                      variant="outline-light rounded-circle" role="button"
+                      target={"_blank"}
+                      href="https://linkedin.com/in/rohankaran001">
                     <FaLinkedinIn className={"mb-1"}/>
                   </Button></li>
                   <li className="list-inline-item"><Button
                       variant="outline-light rounded-circle" role="button"
-                      href="https://github.com/rohankaran">
+                      href="https://github.com/rohankaran"
+                      target={"_blank"}
+                  >
                     <FaGithub className={"mb-1"}/>
                   </Button></li>
                   <li className="list-inline-item"><Button
                       variant="outline-light rounded-circle" role="button"
-                      href="mailto:rohankaran001@gmail.com">
+                      href="mailto:rohankaran001@gmail.com"
+                      target={"_blank"}
+                  >
                     <FaEnvelope className={"mb-1"}/>
                   </Button></li>
                 </ul>

@@ -57,12 +57,14 @@ function App() {
 
                   <a href={"https://github.com/rohankaran/certificate-generator/issues/new/choose"}
                      target={"_blank"}
+                     rel="noreferrer"
                      className={"text-white text-decoration-none"}>
                     <p>Report a bug</p>
                   </a>
 
                   <a href={"https://github.com/rohankaran/certificate-generator"}
                      target={"_blank"}
+                     rel="noreferrer"
                         className={"text-white text-decoration-none"}>
                     <p>
                       View app source

@@ -66,24 +66,9 @@ Button.btn {
 }
 
 #clear {
-  color:red;
-  font-size:0.8rem;
-  display: inline-block;
-  font-weight: 500;
-  line-height: 1.5;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid red;
-  padding: .375rem .75rem;
+  font-size:0.5rem;
   border-radius: 0;
-  transition: color .15s ease-in-out,red .15s ease-in-out,white .15s ease-in-out,red .15s ease-in-out;
+  padding: .3rem .4rem;
 }
 
 Button.btn-outline-light {
@@ -270,6 +255,12 @@ div.hr {
     font-weight: 700;
 
   }
+
+  #clear {
+    font-size:0.8rem;
+    padding: .375rem .75rem;
+
+}
 
 }
 

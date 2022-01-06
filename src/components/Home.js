@@ -166,6 +166,7 @@ function Home(){
 
                 <div align={"right"}>
                     <Button id={"clear"}
+                            className={"btn btn-outline-danger"}
                             onClick={() => {
                                 setImgs([])
                                 setBool(true)
@@ -193,6 +194,7 @@ function Home(){
             <Container align={"center"} className={"mb-5 carousel"} hidden={bool}>
                 <div align={"right"}>
                     <Button id={"clear"}
+                            className={"btn btn-outline-danger"}
                             hidden={bool}
                             onClick={() => {
                                 setImgs([])

@@ -4,6 +4,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   text-align: center;
   font-weight: 700;
   word-wrap: break-word;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 
 }
 
@@ -63,16 +66,24 @@ Button.btn {
 }
 
 #clear {
-  border-color: red;
   color:red;
   font-size:0.8rem;
-  border-radius: 0;
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   background-color: transparent;
-  /*-webkit-user-select: none;*/
-  /*-moz-user-select: none;*/
-  /*-ms-user-select: none;*/
-  /*user-select: none;*/
-  /*transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;*/
+  border: 1px solid red;
+  padding: .375rem .75rem;
+  border-radius: 0;
+  transition: color .15s ease-in-out,red .15s ease-in-out,white .15s ease-in-out,red .15s ease-in-out;
 }
 
 Button.btn-outline-light {
@@ -117,6 +128,9 @@ Button.btn-xl {
   justify-content: space-between;
   padding-top: .5rem;
   padding-bottom: .5rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 *, *::before, *::after {
@@ -145,6 +159,9 @@ Button.btn-xl {
   padding-left: 0.75rem;
   margin-right: auto;
   margin-left: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .container.carousel{
@@ -251,6 +268,7 @@ div.hr {
     font-size: 6rem;
     line-height: 3rem;
     font-weight: 700;
+
   }
 
 }
@@ -264,7 +282,10 @@ div.hr {
 
 
 
-/*.App{*/
-/*  font-family: "Montserrat", sans-serif;*/
-/*}*/
+.App{
+  font-family: "Montserrat", sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
 

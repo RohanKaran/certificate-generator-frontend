@@ -137,7 +137,7 @@ function Home(){
                     <Button type="submit" variant={"light"}
                           className={"btn btn-outline-light btn-xl mb-1 my-2"}
                   >
-                    Add <FaPlus className={"md-1"}/>
+                    <FaPlus className={"mb-1"}/> Add
                   </Button>
                 </Form>
 

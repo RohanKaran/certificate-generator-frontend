@@ -5,7 +5,6 @@ import {Button, Carousel, Container, Figure, Form, Image} from "react-bootstrap"
 import axios from "axios";
 import Slideshow from "./ImageList";
 import {FaDownload, FaTrash} from "react-icons/fa";
-// import {jsPDF} from "jspdf";
 import JSZip from "jszip";
 import {saveAs} from 'file-saver';
 

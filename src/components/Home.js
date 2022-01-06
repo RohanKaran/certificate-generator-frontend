@@ -17,6 +17,7 @@ function Home(){
     const [imgs, setImgs] = useState([])
     const [bool, setBool] = useState(true)
     const [loading, setLoading] = useState(true)
+    let logo;
     const backend_url = process.env.REACT_APP_BACKEND_URL
 
 
@@ -61,13 +62,31 @@ function Home(){
     };
 
 
+    let base64data = "";
+    const handleChange = (event) => {
+
+        logo = event.target.file
+        const reader = new FileReader();
+        reader.readAsDataURL(logo);
+        base64data = reader.result;
+        console.log(base64data.substr(base64data.indexOf(',')+1) )
+    }
+
+
 
 
     return(
         <>
             <header className={"text-left text-white bg-primary masthead"}>
             <Container>
-                <h1 className={"text-center mb-4"}>{org}</h1>
+                <div align={"center"}  hidden={logo===""} className={"mb-4"}>
+                <Image src={`data:image/png;charset=utf-8;base64,${base64data.substr(base64data.indexOf(',')+1)}`}
+                   fluid={true}
+                   style={{width: "5rem", maxWidth: '15%'}}
+                />
+                </div>
+
+                <h1 className={"text-center mb-5"}>{org}</h1>
                 <Form onSubmit={handleSubmit}>
                   <Form.Group className="mb-3" >
                     <Form.Label>Organization name</Form.Label>
@@ -75,6 +94,16 @@ function Home(){
                                   placeholder="Enter organization name"
                                   onChange={event => setOrg(event.target.value)}
                                   required
+                    />
+                  </Form.Group>
+
+                    <Form.Group className="mb-3" >
+                    <Form.Label>Organization logo</Form.Label>
+                    <Form.Control type="file"
+                                  placeholder="Upload organization logo"
+                                  onChange={handleChange}
+                                  accept={"image/png, image/jpeg"}
+
                     />
                   </Form.Group>
 

@@ -1,7 +1,7 @@
 import '../App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState} from "react";
-import {Button, Container, Figure, Form} from "react-bootstrap";
+import {Button, Carousel, Container, Figure, Form, Image} from "react-bootstrap";
 import axios from "axios";
 import Slideshow from "./ImageList";
 import {FaDownload, FaTrash} from "react-icons/fa";
@@ -134,8 +134,10 @@ function Home(){
                                   required
                         />
                   </Form.Group>
-                  <Button type="submit" variant={"light"}
-                          className={"btn btn-outline-light btn-xl mb-1 my-2"}>
+
+                    <Button type="submit" variant={"light"}
+                          className={"btn btn-outline-light btn-xl mb-1 my-2"}
+                  >
                     Add +
                   </Button>
                 </Form>
@@ -144,14 +146,31 @@ function Home(){
                 </header>
             <br/>
 
-            <div align={"center"}  hidden={loading} className={"mb-4"}>
+            <div align={"center"} hidden={loading} className={"mb-4"}>
             <Figure.Image src={"https://www.dropbox.com/s/aejzhvqvtegnp02/Spinner-1s-800px.svg?raw=1"}
                    fluid={true}
                    style={{width: "5rem", maxWidth: '15%'}}/>
                 <span>Adding...</span>
                 </div>
 
-            <Container align={"center"} hidden={bool} className={"mb-5 carousel"}>
+
+            {/*Preview*/}
+            <Container align={"center"} className={"mb-5 carousel"} hidden={!bool}>
+            <Carousel>
+                <Carousel.Item >
+                    <Image
+                      src={`/base_text.png`}
+                      alt="First slide"
+                      fluid={true}
+                      className={"img-thumbnail "}
+                    />
+                </Carousel.Item></Carousel>
+            </Container>
+
+
+
+
+            <Container align={"center"} className={"mb-5 carousel"} hidden={bool}>
 
 
 
@@ -170,7 +189,8 @@ function Home(){
                     </Button>
                 </div>
 
-                <Slideshow images={imgs}/>
+
+                <Slideshow images={imgs} hidden_props={bool}/>
 
                 <Button variant={"outline-dark"} size={"lg"}
                         className={"my-5"}

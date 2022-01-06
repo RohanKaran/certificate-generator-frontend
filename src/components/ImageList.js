@@ -5,7 +5,10 @@ import "../App.css";
 export default function Slideshow(props) {
     return (
 
-            <Carousel variant={"dark"} className={"carousel border border-2 border-dark"}>
+            <Carousel variant={"dark"}
+
+                      className={"carousel border border-2 border-dark"}>
+
                 {props.images.map(imagedata =>
                     <Carousel.Item>
                         <Img data={imagedata} />

@@ -97,7 +97,7 @@ function Home(){
                 />
                 </div>
 
-                <h1 className={"text-center mb-5"}>{org}</h1>
+                <h1 className={"text-center mb-4"} hidden={org===""}>{org}</h1>
                 <Form onSubmit={handleSubmit}>
                   <Form.Group className="mb-3" >
                     <Form.Label>Organization name</Form.Label>

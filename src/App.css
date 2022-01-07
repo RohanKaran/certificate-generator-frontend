@@ -65,6 +65,8 @@ Button.btn {
 
 }
 
+
+
 #clear {
   font-size:0.5rem;
   border-radius: 0;
@@ -76,11 +78,19 @@ Button.btn-outline-light {
   border-color: #f8f9fa;
 }
 
+
 Button.btn-xl {
   /*padding: 1rem 1.75rem;*/
   font-size: 1.25rem;
 }
 
+
+#check {
+  border: 20px solid #18bc9c;
+  color: green;
+  border-radius: 100rem;
+  background-color: transparent;
+}
 
 .bg-secondary {
   background-color: #2c3e50 !important;
@@ -149,37 +159,13 @@ Button.btn-xl {
   -ms-user-select: none;
 }
 
-.container.carousel{
-        width: 80%;
-  }
 
-/*hr.star-dark:after {*/
-/*  color: #2c3e50;*/
-/*  background-color: #fff;*/
-/*}*/
 
-/*hr.star-light::after, hr.star-dark::after {*/
-/*  position: relative;*/
-/*  top: -0.8em;*/
-/*  display: inline-block;*/
-/*  padding: 0 .25em;*/
-/*  content: "f005";*/
-/*  font-family: FontAwesome, sans-serif;*/
-/*  font-size: 2em;*/
-/*}*/
-hr.star-dark {
-  max-width: 15rem;
-  padding: 0;
-  text-align: center;
-  border: none #2c3e50;
-  border-top: .25rem solid darkblue;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  height: 60px;
-  color: white;
-}
+ .react-multiple-carousel__arrow {
+   margin-bottom: 75px !important;
+
+ }
+
 
 div.hr {
   max-width: 10rem;
@@ -189,17 +175,6 @@ div.hr {
   border-color: red;
 }
 
-/*hr:not([size]) {*/
-/*  height: 5px;*/
-/*  color: red;*/
-/*  border-width: 45px;*/
-/*  border-color: red;*/
-/*}*/
-
-/*.mb-5 {*/
-/*  margin-bottom: 3rem !important;*/
-/*}*/
-
 
 .footer {
   padding-top: 5rem;
@@ -207,6 +182,9 @@ div.hr {
   background-color: #2c3e50;
   color: #fff;
 }
+  #carousel-multi{
+    alignment: center;
+  }
 
 
 
@@ -260,7 +238,15 @@ div.hr {
     font-size:0.8rem;
     padding: .375rem .75rem;
 
-}
+  }
+  #carousel-multi{
+    width: 64%;
+    alignment: center;
+  }
+   .react-multiple-carousel__arrow {
+   margin-bottom: 60px !important;
+
+ }
 
 }
 

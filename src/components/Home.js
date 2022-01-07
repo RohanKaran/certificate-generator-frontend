@@ -1,12 +1,14 @@
 import '../App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState} from "react";
-import {Button, Carousel, Container, Figure, Form, Image} from "react-bootstrap";
+import {Button, Carousel as Car, Container, Figure, Form, Image, ToggleButton} from "react-bootstrap";
 import axios from "axios";
 import Slideshow from "./ImageList";
-import {FaDownload, FaPlus, FaTrash} from "react-icons/fa";
+import {FaCheck, FaDownload, FaPlus, FaTrash} from "react-icons/fa";
 import JSZip from "jszip";
 import {saveAs} from 'file-saver';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 
 function Home(){
@@ -15,6 +17,7 @@ function Home(){
     const [imgs, setImgs] = useState([])
     const [bool, setBool] = useState(true)
     const [loading, setLoading] = useState(true)
+    const [checked, setChecked] = useState('1');
     const backend_url = process.env.REACT_APP_BACKEND_URL
 
 
@@ -41,7 +44,7 @@ function Home(){
 
     const addImageHandler = async () => {
         await axios.post(backend_url+`/add/`,
-            {'name':name , 'org': org , 'logo': baseImage.substr(22)})
+            {'index': checked, 'name':name , 'org': org , 'logo': baseImage.substr(22)})
             .then(res => {
                 setBool(true);
 
@@ -89,11 +92,175 @@ function Home(){
       };
 
 
+    const responsive = {
+      superLargeDesktop: {
+        // the naming can be any, depends on you.
+        breakpoint: { max: 4000, min: 3000 },
+        items: 5
+      },
+      desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 3
+      },
+      tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 3
+      },
+      mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 3
+      }
+    };
+
+
 
 
     return(
         <>
+
             <header className={"text-left text-white bg-primary masthead"}>
+
+
+         {/*--------*/}
+            {/*template*/}
+            {/*--------*/}
+
+
+
+              <Container align={"center"} id={"carousel-multi"} className={"mb-5"}>
+            <Carousel
+                swipeable={true}
+                draggable={true}
+                showDots={true}
+                responsive={responsive}
+                ssr={true} // means to render carousel on server-side.
+                infinite={true}
+                autoPlay={false}
+                keyBoardControl={true}
+                customTransition="transform 500ms ease-in-out"
+                transitionDuration={500}
+                itemClass="image-item-padding-10px"
+                // removeArrowOnDeviceType = {'mobile'}
+            >
+            <div className={"mx-2"}>
+                  <Figure>
+                      <Figure.Image
+                          src={"1"}
+                      />
+                      <ToggleButton
+                        id="check-1"
+                        className={"rounded-circle mb-2"}
+                        variant={"outline-light"}
+                        type="checkbox"
+                        checked={checked==='1'}
+                        onChange={(e) => {
+                            setChecked(e.currentTarget.value)
+                        }}
+                        value='1'
+                  >
+                      <FaCheck/>
+                  </ToggleButton>
+                  </Figure>
+            </div>
+
+
+
+
+              <div className={"mx-2"}><Figure>
+                      <Figure.Image
+                          src={"2"}
+                      />
+                  <ToggleButton
+                        id="check-2"
+                        className={"rounded-circle"}
+                        variant={"outline-light"}
+                        type="checkbox"
+                        checked={checked==='2'}
+                        onChange={(e) => {
+                            setChecked(e.currentTarget.value)
+                        }}
+                        value='2'
+                  >
+                      <FaCheck/>
+                  </ToggleButton>
+
+                  </Figure></div>
+
+              <div className={"mx-2"}><Figure>
+                      <Figure.Image
+                          src={"3"}
+                      />
+                  <ToggleButton
+                        id="check-3"
+                        className={"rounded-circle"}
+                        variant={"outline-light"}
+                        type="checkbox"
+                        checked={checked==='3'}
+                        onChange={(e) => {
+                            setChecked(e.currentTarget.value)
+                        }}
+                        value='3'
+                  >
+                      <FaCheck/>
+                  </ToggleButton>
+
+
+                  </Figure></div>
+
+              <div className={"mx-2"}>
+                  <Figure>
+                      <Figure.Image
+                          src={"4"}
+                      />
+                  <ToggleButton
+                        id="check-4"
+                        className={"rounded-circle mb-3"}
+                        variant={"outline-light"}
+                        type="checkbox"
+                        checked={checked==='4'}
+                        onChange={(e) => {
+                            setChecked(e.currentTarget.value)
+                        }}
+                        value='4'
+                  >
+                      <FaCheck className={"mb-1"}/>
+                  </ToggleButton>
+                  </Figure></div>
+                <div className={"mx-2"}>
+                  <Figure>
+                      <Figure.Image
+                          src={"5"}
+                      />
+                  <ToggleButton
+                        id="check-5"
+                        className={"rounded-circle mb-3"}
+                        variant={"outline-light"}
+                        type="checkbox"
+                        checked={checked==='5'}
+                        onChange={(e) => {
+                            setChecked(e.currentTarget.value)
+                        }}
+                        value='5'
+                  >
+                      <FaCheck className={"mb-1"}/>
+                  </ToggleButton>
+                  </Figure></div>
+            </Carousel>
+        </Container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <Container>
                 <div align={"center"}  hidden={baseImage===""} className={"mb-4"}>
                 <Figure.Image src={baseImage}
@@ -103,6 +270,7 @@ function Home(){
                 </div>
 
                 <h1 className={"text-center mb-4"} hidden={org===""}>{org}</h1>
+
                 <Form onSubmit={handleSubmit}>
                   <Form.Group className="mb-3" >
                     <Form.Label>Organization name</Form.Label>
@@ -153,7 +321,12 @@ function Home(){
                 </div>
 
 
+
+
             {/*Preview*/}
+
+
+
 
 
 
@@ -176,17 +349,17 @@ function Home(){
                     </Button>
                 </div>
 
-            <Carousel
+            <Car
                 className={"carousel border border-2 border-dark"}
                 hidden={!bool}>
-                <Carousel.Item >
+                <Car.Item >
                     <Image
                       src={`/base_text.png`}
                       alt="First slide"
                       fluid={true}
                       className={"img-thumbnail "}
                     />
-                </Carousel.Item></Carousel>
+                </Car.Item></Car>
             </Container>
 
 

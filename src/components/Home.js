@@ -120,7 +120,7 @@ function Home(){
                                   onChange={(e) => {
                                     uploadImage(e);
                                         }}
-                                  accept={"image/png, image/jpeg"}
+                                  accept={"image/*"}
 
                     />
                   </Form.Group>

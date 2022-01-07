@@ -52,7 +52,7 @@ function App() {
         <footer className="text-center footer" id={"about"}>
           <Container>
             <Row>
-              <Col className="col-md-4 mb-5 mb-lg-0">
+              <Col className="col-md-4 mb-lg-0">
                 <h4 className="text-uppercase mb-4">MORE</h4>
 
                   <a href={"https://github.com/rohankaran/certificate-generator/issues/new/choose"}
@@ -72,7 +72,7 @@ function App() {
                   </a>
 
               </Col>
-              <Col className="col-md-4 mb-5 mb-lg-0">
+              <Col className="col-md-4 mb-lg-0">
                 <h4 className="text-uppercase mb-4">CONTACT</h4>
                 <ul className="list-inline">
                   <li className="list-inline-item"><Button
@@ -97,7 +97,7 @@ function App() {
                   </Button></li>
                 </ul>
               </Col>
-              <Col className="col-md-4 mb-5 mb-lg-0">
+              <Col className="col-md-4 mb-lg-0">
                 <h4 className="text-uppercase mb-4">About</h4>
                 <p>Certificate Generator web site created using FastAPI and React</p>
               </Col>

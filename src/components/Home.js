@@ -124,7 +124,9 @@ function Home(){
          {/*--------*/}
             {/*template*/}
             {/*--------*/}
-
+                <h6 className={"mb-3"}><b style={{color:"#FFFFFF"}} >
+                    CHOOSE A TEMPLATE
+                </b></h6>
 
 
               <Container align={"center"} id={"carousel-multi"} className={"mb-5"}>

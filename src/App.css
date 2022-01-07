@@ -162,7 +162,7 @@ Button.btn-xl {
 
 
  .react-multiple-carousel__arrow {
-   margin-bottom: 75px !important;
+   margin-bottom: 82px !important;
 
  }
 
@@ -243,10 +243,10 @@ div.hr {
     width: 64%;
     alignment: center;
   }
-   .react-multiple-carousel__arrow {
-   margin-bottom: 60px !important;
+ /*  .react-multiple-carousel__arrow {*/
+ /*  margin-bottom: 80px !important;*/
 
- }
+ /*}*/
 
 }
 

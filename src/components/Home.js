@@ -149,7 +149,7 @@ function Home(){
                       />
                       <ToggleButton
                         id="check-1"
-                        className={"rounded-circle mb-2"}
+                        className={"rounded-circle mb-4"}
                         variant={"outline-light"}
                         type="checkbox"
                         checked={checked==='1'}
@@ -158,7 +158,7 @@ function Home(){
                         }}
                         value='1'
                   >
-                      <FaCheck/>
+                      <FaCheck className={"mb-1"}/>
                   </ToggleButton>
                   </Figure>
             </div>
@@ -172,7 +172,7 @@ function Home(){
                       />
                   <ToggleButton
                         id="check-2"
-                        className={"rounded-circle"}
+                        className={"rounded-circle mb-4"}
                         variant={"outline-light"}
                         type="checkbox"
                         checked={checked==='2'}
@@ -181,7 +181,7 @@ function Home(){
                         }}
                         value='2'
                   >
-                      <FaCheck/>
+                      <FaCheck className={"mb-1"}/>
                   </ToggleButton>
 
                   </Figure></div>
@@ -201,7 +201,7 @@ function Home(){
                         }}
                         value='3'
                   >
-                      <FaCheck/>
+                      <FaCheck className={"mb-1"}/>
                   </ToggleButton>
 
 
@@ -214,7 +214,7 @@ function Home(){
                       />
                   <ToggleButton
                         id="check-4"
-                        className={"rounded-circle mb-3"}
+                        className={"rounded-circle mb-4"}
                         variant={"outline-light"}
                         type="checkbox"
                         checked={checked==='4'}
@@ -233,7 +233,7 @@ function Home(){
                       />
                   <ToggleButton
                         id="check-5"
-                        className={"rounded-circle mb-3"}
+                        className={"rounded-circle mb-4"}
                         variant={"outline-light"}
                         type="checkbox"
                         checked={checked==='5'}

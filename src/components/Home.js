@@ -78,7 +78,7 @@ function Home(){
               file,
               130,
               130,
-              "JPEG",
+              "PNG",
               100,
               0,
               (uri) => {

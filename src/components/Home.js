@@ -9,9 +9,11 @@ import JSZip from "jszip";
 import {saveAs} from 'file-saver';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Resizer from "react-image-file-resizer";
 
 
 function Home(){
+
     const [org, setOrg ] = useState("");
     const [name, setName ] = useState("");
     const [imgs, setImgs] = useState([])
@@ -67,29 +69,24 @@ function Home(){
       const uploadImage = async (e) => {
         const file = e.target.files[0];
         console.log(e.target)
-        const base64 = await convertBase64(file);
+        const base64 = await resizeFile(file);
         setBaseImage(base64);
       };
 
-      const convertBase64 = (file) => {
-        return new Promise((resolve, reject) => {
-          const fileReader = new FileReader();
-          try {
-              fileReader.readAsDataURL(file);
-          }
-          catch {
-              setBaseImage("")
-          }
-
-          fileReader.onload = () => {
-            resolve(fileReader.result);
-          };
-
-          fileReader.onerror = (error) => {
-            reject(error);
-          };
-        });
-      };
+      const resizeFile = (file) => new Promise((resolve) => {
+            Resizer.imageFileResizer(
+              file,
+              130,
+              130,
+              "JPEG",
+              100,
+              0,
+              (uri) => {
+                resolve(uri);
+              },
+              "base64"
+            );
+          });
 
 
     const responsive = {

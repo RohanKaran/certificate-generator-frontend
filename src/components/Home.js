@@ -46,11 +46,8 @@ function Home(){
         await axios.post(backend_url+`/add/`,
             {'index': checked, 'name':name , 'org': org , 'logo': baseImage.substr(22)})
             .then(res => {
-                setBool(true);
 
                 imgs.push(res.data)
-
-                setBool(false)
 
             })
     };
@@ -58,7 +55,10 @@ function Home(){
         setLoading(false);
         e.preventDefault();
         e.stopPropagation();
-        addImageHandler().then(() => setLoading(true));
+        addImageHandler().then(() => {
+            setLoading(true)
+            setBool(false)
+        });
     };
 
 

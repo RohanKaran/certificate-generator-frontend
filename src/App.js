@@ -21,7 +21,7 @@ function App() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
 
-              <Nav.Link href="#mainNav" className={"navItem mx-0 mx-lg-1"}>Home</Nav.Link>
+              <Nav.Link href="#home" className={"navItem mx-0 mx-lg-1"}>Home</Nav.Link>
               <Nav.Link href="#link" className={"navItem mx-0 mx-lg-1"} onClick={handleShow}>Login</Nav.Link>
               <Nav.Link href="#about" className={"navItem mx-0 mx-lg-1"}>About</Nav.Link>
             </Nav>
@@ -53,7 +53,52 @@ function App() {
         <footer className="text-center footer" id={"about"}>
           <Container>
             <Row>
-              <Col className="col-md-4 mb-lg-0">
+              <Col className="col-md-4 mb-4 mb-lg-0">
+                <h4 className="text-uppercase mb-4">About</h4>
+                <p>Certificate Generator website created using FastAPI and React and deployed on Heroku.
+                  <br/>( It uses
+                  Heroku's free tier, so it might take some time to add the first certificate.{' '}
+                  <a href={'https://devcenter.heroku.com/articles/free-dyno-hours'}
+                     style={{
+                       color:'#808080',
+                       textDecoration: "none"
+                     }}
+                     target={"_blank"}
+                     rel="noreferrer"
+                  >
+                     Learn more
+                  </a>
+                  {" "})
+                </p>
+              </Col>
+
+              <Col className="col-md-4 mb-4 mb-lg-0">
+                <h4 className="text-uppercase mb-3">CONTACT</h4>
+                <ul className="list-inline">
+                  <li className="list-inline-item"><Button
+                      variant="outline-light btn-social rounded-circle" role="button"
+                      target={"_blank"}
+                      href="https://linkedin.com/in/rohankaran001">
+                    <FaLinkedinIn size={'inherit'}/>
+                  </Button></li>
+                  <li className="list-inline-item"><Button
+                      variant="outline-light btn-social rounded-circle" role="button"
+                      href="https://github.com/rohankaran"
+                      target={"_blank"}
+                  >
+                    <FaGithub size={'inherit'}/>
+                  </Button></li>
+                  <li className="list-inline-item"><Button
+                      variant="outline-light btn-social rounded-circle" role="button"
+                      href="mailto:rohankaran001@gmail.com"
+                      target={"_blank"}
+                  >
+                    <FaEnvelope size={'inherit'}/>
+                  </Button></li>
+                </ul>
+              </Col>
+
+              <Col className="col-md-4">
                 <h4 className="text-uppercase mb-4">MORE</h4>
                 <a href={"https://github.com/RohanKaran/certificate-generator/discussions/new?category=feedback"}
                      target={"_blank"}
@@ -79,35 +124,7 @@ function App() {
                   </a>
 
               </Col>
-              <Col className="col-md-4 mb-lg-0">
-                <h4 className="text-uppercase mb-4">CONTACT</h4>
-                <ul className="list-inline">
-                  <li className="list-inline-item"><Button
-                      variant="outline-light rounded-circle" role="button"
-                      target={"_blank"}
-                      href="https://linkedin.com/in/rohankaran001">
-                    <FaLinkedinIn className={"mb-1"}/>
-                  </Button></li>
-                  <li className="list-inline-item"><Button
-                      variant="outline-light rounded-circle" role="button"
-                      href="https://github.com/rohankaran"
-                      target={"_blank"}
-                  >
-                    <FaGithub className={"mb-1"}/>
-                  </Button></li>
-                  <li className="list-inline-item"><Button
-                      variant="outline-light rounded-circle" role="button"
-                      href="mailto:rohankaran001@gmail.com"
-                      target={"_blank"}
-                  >
-                    <FaEnvelope className={"mb-1"}/>
-                  </Button></li>
-                </ul>
-              </Col>
-              <Col className="col-md-4 mb-lg-0">
-                <h4 className="text-uppercase mb-4">About</h4>
-                <p>Certificate Generator web site created using FastAPI and React</p>
-              </Col>
+
             </Row>
           </Container>
 

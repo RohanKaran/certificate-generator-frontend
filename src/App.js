@@ -13,7 +13,7 @@ function App() {
 
   return (
       <>
-     <Navbar bg="primary" expand="lg" className={"text-uppercase navbar-expand-lg navbar-light fixed-top"}
+     <Navbar bg="primary" expand="lg" className={"text-uppercase text-white navbar-expand-lg navbar-light fixed-top"}
              id={"mainNav"} variant={"dark"}>
         <Container>
           <Navbar.Brand href="#mainNav">Certificate Generator</Navbar.Brand>

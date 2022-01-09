@@ -58,7 +58,7 @@ function App() {
                 <p>Certificate Generator website created using FastAPI and React and deployed on Heroku.
                   <br/>( It uses
                   Heroku's free tier, so it might take some time to add the first certificate.{' '}
-                  <a href={'https://devcenter.heroku.com/articles/free-dyno-hours'}
+                  <a href={'https://devcenter.heroku.com/articles/free-dyno-hours#dyno-sleeping'}
                      style={{
                        color:'#808080',
                        textDecoration: "none"

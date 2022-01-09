@@ -31,7 +31,7 @@ function App() {
 
 
       <Modal id={"modal"} show={show} onHide={handleClose} align={"center"} centered size="lg"
-             style={{"font-family": "Montserrat"}}>
+             style={{fontFamily: "Montserrat"}}>
         <Modal.Header closeButton>
           <Modal.Title>Club login</Modal.Title>
         </Modal.Header>

@@ -68,6 +68,8 @@ Button.btn {
 .navbar-dark .navbar-toggler {
   background: #18bc9c;
   border-color: #18bc9c;
+  font-size: 100% !important;
+
 
 }
 

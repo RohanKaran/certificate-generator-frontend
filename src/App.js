@@ -7,16 +7,29 @@ import Home from "./components/Home";
 
 function App() {
   const [show, setShow] = useState(false);
-
+  const [navbar, setNavbar] = useState(false)
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  
+  const navShrink = () => {
+    if (window.scrollY >= 80){
+      setNavbar(true)
+    }
+    else {
+      setNavbar(false)
+    }
+  }
+
+  window.addEventListener('scroll', navShrink);
 
   return (
       <>
-     <Navbar collapseOnSelect bg="primary" expand="lg" className={"text-uppercase text-white navbar-expand-lg navbar-light"}
+     <Navbar collapseOnSelect bg="primary" expand="lg"
+             className={navbar ? 'active text-uppercase text-white navbar-expand-lg navbar-light'
+         : "text-uppercase text-white navbar-expand-lg navbar-light"}
              id={"mainNav"} variant={"dark"} fixed={'top'}>
         <Container>
-          <Navbar.Brand>Certificate Generator</Navbar.Brand>
+          <Navbar.Brand className={navbar ? 'active' : ""}>Certificate Generator</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">

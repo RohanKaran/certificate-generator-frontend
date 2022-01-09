@@ -211,6 +211,7 @@ div.hr {
   background-color: transparent  !important;
 }
 
+
   #carousel-multi{
     alignment: center;
   }
@@ -247,6 +248,13 @@ div.hr {
     flex-wrap: nowrap;
     justify-content: flex-start;
   }
+    .navbar.active {
+  padding: 0.8rem 0.8rem !important;
+  }
+  .navbar-brand.active{
+    font-size: 1.5rem !important;
+  }
+
    .container.carousel{
         width: 60%;
   }

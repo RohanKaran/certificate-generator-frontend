@@ -54,7 +54,7 @@ function App() {
           <Container>
             <Row>
               <Col className="col-md-4 mb-4 mb-lg-0">
-                <h4 className="text-uppercase mb-4">About</h4>
+                <h4 className="text-uppercase mb-3">About</h4>
                 <p>Certificate Generator website created using FastAPI and React and deployed on Heroku.
                   <br/>( It uses
                   Heroku's free tier, so it might take some time to add the first certificate.{' '}
@@ -99,29 +99,34 @@ function App() {
               </Col>
 
               <Col className="col-md-4">
-                <h4 className="text-uppercase mb-4">MORE</h4>
+                <h4 className="text-uppercase mb-3">MORE</h4>
+                <div className={'mb-2'}>
                 <a href={"https://github.com/RohanKaran/certificate-generator/discussions/new?category=feedback"}
                      target={"_blank"}
                      rel="noreferrer"
                      className={"text-white text-decoration-none"}>
-                    <p>Feedback</p>
+                    Feedback
                   </a>
+                  </div>
 
+
+                <div className={'mb-2'}>
                   <a href={"https://github.com/rohankaran/certificate-generator/issues/new/choose"}
                      target={"_blank"}
                      rel="noreferrer"
                      className={"text-white text-decoration-none"}>
-                    <p>Report a bug</p>
+                    Report a bug
                   </a>
+                </div>
 
+                <div>
                   <a href={"https://github.com/rohankaran/certificate-generator"}
                      target={"_blank"}
                      rel="noreferrer"
                         className={"text-white text-decoration-none"}>
-                    <p>
                       View app source
-                    </p>
                   </a>
+                </div>
 
               </Col>
 

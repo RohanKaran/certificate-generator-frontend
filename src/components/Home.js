@@ -1,10 +1,19 @@
 import '../App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState} from "react";
-import {Button, Carousel as Car, Container, Figure, Form, Image, ToggleButton} from "react-bootstrap";
+import {Button, Carousel as Car, Container, Figure, Form, Image, Modal, ToggleButton} from "react-bootstrap";
 import axios from "axios";
 import Slideshow from "./ImageList";
-import {FaCheck, FaDownload, FaPlus, FaTrash} from "react-icons/fa";
+import {
+    FaCheck, FaCircle,
+    FaCross,
+    FaDownload,
+    FaPlus,
+    FaQuestion, FaQuestionCircle, FaRegQuestionCircle,
+    FaRegTimesCircle,
+    FaTimesCircle,
+    FaTrash
+} from "react-icons/fa";
 import JSZip from "jszip";
 import {saveAs} from 'file-saver';
 import Carousel from "react-multi-carousel";
@@ -20,6 +29,9 @@ function Home(){
     const [bool, setBool] = useState(true)
     const [loading, setLoading] = useState(true)
     const [checked, setChecked] = useState('1');
+    const [sure, setSure] = useState(false);
+    const handleSureShow = () => setSure(true);
+    const handleSureClose = () => setSure(false);
     const backend_url = process.env.REACT_APP_BACKEND_URL
 
 
@@ -114,6 +126,41 @@ function Home(){
 
     return(
         <>
+
+            <Modal id={"modal"} show={sure} onHide={handleSureClose}
+                    className={'card-body card-text'}
+                   align={"center"} centered size="lm"
+             style={{fontFamily: "Montserrat"}}>
+        <div align={'center'} className={'my-0 mb-0 float-end'}
+        >
+                <Modal.Header closeButton className={'border-bottom-0 mb-0 float-end'}/>
+
+            </div>
+                <div className={'mb-1 mt-0' }>
+                    <FaRegQuestionCircle size={"20%"} color={'#18bc9c'}/>
+                <Modal.Title style={{color: '#18bc9c'}}>ARE YOU SURE?</Modal.Title>
+                    <div className={'mt-1  mx-3'}>Do you really want to clear all certificates? This process cannot be undone.</div>
+
+            </div>
+
+        <Modal.Body><div className={"text-danger card-body mb-3"}>
+            <Button variant="secondary"
+                        className={'mx-2'}
+                  onClick={handleSureClose}>
+            CANCEL
+          </Button>
+          <Button variant="outline-danger"
+                  className={'mx-2'}
+                  onClick={() => {
+                      setImgs([])
+                      setBool(true)
+                      handleSureClose()
+                  }}>
+            CLEAR
+          </Button>
+
+            </div> </Modal.Body>
+      </Modal>
 
             <header className={"text-left text-white bg-primary masthead"} id={'home'}>
 
@@ -338,11 +385,10 @@ function Home(){
 
                 <div align={"right"}>
                     <Button id={"clear"}
-                            className={"btn btn-outline-danger"}
-                            onClick={() => {
-                                setImgs([])
-                                setBool(true)
-                            }}
+                            variant={"outline-danger"}
+                            onClick= {
+                                handleSureShow
+                            }
                     >
                     <FaTrash className={"mb-1"}/> CLEAR
                     </Button>
@@ -366,12 +412,11 @@ function Home(){
             <Container align={"center"} className={"mb-5 carousel"} hidden={bool}>
                 <div align={"right"}>
                     <Button id={"clear"}
-                            className={"btn btn-outline-danger"}
+                            variant={"outline-danger"}
                             hidden={bool}
-                            onClick={() => {
-                                setImgs([])
-                                setBool(true)
-                            }}
+                            onClick= {
+                                handleSureShow
+                            }
                     >
                     <FaTrash className={"mb-1"}/> CLEAR
                     </Button>

@@ -84,9 +84,23 @@ Button.btn {
   font-size:0.5rem;
   border-radius: 0;
   padding: .3rem .4rem;
+  color: #18bc9c !important;
+  border-color: #18bc9c !important;
+}
+  #clear:hover, #clear:focus{
+    color: white !important;
+    background-color: red !important;
+    border-color: red !important;
+
+  }
+
+#clear:active {
+  background-color: red !important;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
-Button.btn-outline-light {
+button.btn-outline-light {
   color: #f8f9fa;
   border-color: #f8f9fa;
 }
@@ -96,6 +110,24 @@ Button.btn-xl {
   /*padding: 1rem 1.75rem;*/
   font-size: 1.25rem;
 }
+
+.btn-outline-danger {
+  color: orangered !important;
+  border-color: orangered !important;
+}
+.btn-outline-danger:hover {
+  color: white !important;
+}
+
+.btn-secondary {
+  color: gray !important;
+  border-color: gray !important;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  color: white !important;
+}
+
 
 
 .col {
@@ -272,10 +304,14 @@ a:hover{
   }
 
   #clear {
+    color: #18bc9c !important;
+    border-color: #18bc9c !important;
     font-size:0.8rem;
     padding: .375rem .75rem;
 
   }
+
+
   #carousel-multi{
     width: 64%;
     alignment: center;

@@ -46,7 +46,7 @@ function App() {
       <Modal id={"modal"} show={show} onHide={handleClose} align={"center"} centered size="lg"
              style={{fontFamily: "Montserrat"}}>
         <Modal.Header closeButton>
-          <Modal.Title>Club login</Modal.Title>
+          <Modal.Title>CLUB LOGIN</Modal.Title>
         </Modal.Header>
         <Modal.Body><div className={"text-danger card-text"}> Under Development!</div> </Modal.Body>
         <Modal.Footer>
@@ -55,6 +55,7 @@ function App() {
           </Button>
         </Modal.Footer>
       </Modal>
+
 
 
 

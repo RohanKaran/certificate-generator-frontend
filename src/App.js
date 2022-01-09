@@ -16,7 +16,7 @@ function App() {
      <Navbar bg="primary" expand="lg" className={"text-uppercase text-white navbar-expand-lg navbar-light fixed-top"}
              id={"mainNav"} variant={"dark"}>
         <Container>
-          <Navbar.Brand href="#mainNav">Certificate Generator</Navbar.Brand>
+          <Navbar.Brand>Certificate Generator</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">

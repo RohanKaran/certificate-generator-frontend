@@ -13,8 +13,8 @@ function App() {
 
   return (
       <>
-     <Navbar bg="primary" expand="lg" className={"text-uppercase text-white navbar-expand-lg navbar-light fixed-top"}
-             id={"mainNav"} variant={"dark"}>
+     <Navbar collapseOnSelect bg="primary" expand="lg" className={"text-uppercase text-white navbar-expand-lg navbar-light"}
+             id={"mainNav"} variant={"dark"} fixed={'top'}>
         <Container>
           <Navbar.Brand>Certificate Generator</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -21,6 +21,7 @@ function App() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
 
+              <Nav.Link href="#mainNav" className={"navItem mx-0 mx-lg-1"}>Home</Nav.Link>
               <Nav.Link href="#link" className={"navItem mx-0 mx-lg-1"} onClick={handleShow}>Login</Nav.Link>
               <Nav.Link href="#about" className={"navItem mx-0 mx-lg-1"}>About</Nav.Link>
             </Nav>

@@ -5,13 +5,9 @@ import {Button, Carousel as Car, Container, Figure, Form, Image, Modal, ToggleBu
 import axios from "axios";
 import Slideshow from "./ImageList";
 import {
-    FaCheck, FaCircle,
-    FaCross,
-    FaDownload,
+    FaCheck, FaDownload,
     FaPlus,
-    FaQuestion, FaQuestionCircle, FaRegQuestionCircle,
-    FaRegTimesCircle,
-    FaTimesCircle,
+    FaRegQuestionCircle,
     FaTrash
 } from "react-icons/fa";
 import JSZip from "jszip";
@@ -343,7 +339,6 @@ function Home(){
                     <Form.Label>Add Name</Form.Label>
                     <Form.Control type="text" placeholder="Enter name"
                                   onChange={event => setName(event.target.value)}
-                                  required
                         />
                   </Form.Group>
                     <div align={"center"} className={"mt-4"}>

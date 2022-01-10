@@ -24,7 +24,7 @@ function App() {
 
   return (
       <>
-     <Navbar collapseOnSelect bg="primary" expand="lg"
+     <Navbar collapseOnSelect expand="lg"
              className={navbar ? 'active text-uppercase text-white navbar-expand-lg navbar-light'
          : "text-uppercase text-white navbar-expand-lg navbar-light"}
              id={"mainNav"} variant={"dark"} fixed={'top'}>

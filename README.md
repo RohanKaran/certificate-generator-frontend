@@ -1,4 +1,4 @@
-<img src="preview.png" title="description" width="100%"></img>
+<img src="public/preview.png" title="description" width="100%"></img>
 
 # Certificate Generator
 ### Web app created using React and FastAPI

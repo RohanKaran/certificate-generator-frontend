@@ -69,7 +69,7 @@ function Home(){
             setLoading(true)
             setBool(false)
         })
-        .catch(error => {
+        .catch(() => {
                 alert("Network error! Check your internet connection.");
             });
 

@@ -70,7 +70,7 @@ function Home(){
             setBool(false)
         })
         .catch(error => {
-                console.log(error)
+                alert("Network error! Check your internet connection.");
             });
 
     };

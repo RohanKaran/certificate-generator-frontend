@@ -1,5 +1,3 @@
-<img src="public/preview.png" title="description" width="100%"></img>
-
 # Certificate Generator
 ### Web app created using React and FastAPI
 It generates certificate on adding organization name, logo and members' names. <br/>

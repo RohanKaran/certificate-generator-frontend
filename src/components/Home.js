@@ -68,7 +68,11 @@ function Home(){
         addImageHandler().then(() => {
             setLoading(true)
             setBool(false)
-        });
+        })
+        .catch(error => {
+                console.log(error)
+            });
+
     };
 
 

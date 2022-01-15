@@ -385,9 +385,7 @@ function Home(){
                 <div align={"right"}>
                     <Button id={"clear"}
                             variant={"outline-danger"}
-                            onClick= {
-                                handleSureShow
-                            }
+                            disabled={true}
                     >
                     <FaTrash className={"mb-1"}/> CLEAR
                     </Button>
